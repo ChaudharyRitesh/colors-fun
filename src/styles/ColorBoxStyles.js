@@ -8,30 +8,30 @@ export default {
     display: "inline-block",
     position: "relative",
     cursor: "pointer",
-    marginBottom: "-3.5px",
+    marginBottom: "-6px",
     "&:hover button": {
-      opacity: 1
+      opacity: 1,
     },
     [sizes.down("lg")]: {
       width: "25%",
-      height: props => (props.showingFullPalette ? "20%" : "33.3333%")
+      height: props => (props.showingFullPalette ? "20%" : "33.3333%"),
     },
     [sizes.down("md")]: {
       width: "50%",
-      height: props => (props.showingFullPalette ? "10%" : "20%")
+      height: props => (props.showingFullPalette ? "10%" : "20%"),
     },
     [sizes.down("xs")]: {
       width: "100%",
-      height: props => (props.showingFullPalette ? "5%" : "10%")
-    }
+      height: props => (props.showingFullPalette ? "5%" : "10%"),
+    },
   },
   copyText: {
     color: props =>
-      chroma(props.background).luminance() >= 0.7 ? "black" : "white"
+      chroma(props.background).luminance() >= 0.7 ? "black" : "white",
   },
   colorName: {
     color: props =>
-      chroma(props.background).luminance() <= 0.08 ? "white" : "black"
+      chroma(props.background).luminance() <= 0.08 ? "white" : "black",
   },
   seeMore: {
     color: props =>
@@ -45,7 +45,7 @@ export default {
     height: "30px",
     textAlign: "center",
     lineHeight: "30px",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
   },
   copyButton: {
     color: props =>
@@ -66,7 +66,7 @@ export default {
     textTransform: "uppercase",
     border: "none",
     textDecoration: "none",
-    opacity: 0
+    opacity: 0,
   },
   boxContent: {
     position: "absolute",
@@ -77,7 +77,7 @@ export default {
     color: "black",
     letterSpacing: "1px",
     textTransform: "uppercase",
-    fontSize: "12px"
+    fontSize: "12px",
   },
   copyOverlay: {
     opacity: "0",
@@ -85,13 +85,13 @@ export default {
     width: "100%",
     height: "100%",
     transition: "transform 0.6s ease-in-out",
-    transform: "scale(0.1)"
+    transform: "scale(0.1)",
   },
   showOverlay: {
     opacity: "1",
     transform: "scale(50)",
     zIndex: "10",
-    position: "absolute"
+    position: "absolute",
   },
   copyMessage: {
     position: "fixed",
@@ -117,19 +117,19 @@ export default {
       padding: "1rem",
       textTransform: "uppercase",
       [sizes.down("xs")]: {
-        fontSize: "6rem"
-      }
+        fontSize: "6rem",
+      },
     },
     "& p": {
       fontSize: "2rem",
-      fontWeight: "100"
-    }
+      fontWeight: "100",
+    },
   },
   showMessage: {
     opacity: "1",
     transform: "scale(1)",
     zIndex: "25",
     transition: "all 0.4s ease-in-out",
-    transitionDelay: "0.3s"
-  }
+    transitionDelay: "0.3s",
+  },
 };
